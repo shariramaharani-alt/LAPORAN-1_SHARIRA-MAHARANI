@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Akun</title> <!--Judul halaman pada browser-->
+    <!--Digunakan untuk memberi jarak antar label form-->
+    <style> 
+        label {
+            display: inline-block;
+            width: 150px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registrasi akun</h1> <!--Judul utama yaitu Registrasi akun, hanya ada satu-->
+    <form action="index.html"> <!--Ketika tombol submit diklik, data akan dikirim ke index.html-->
+    <fieldset> <!--Digunakan agar form dikelompokkan dalam satu kotak-->
+        <legend>Formulir Registrasi</legend> <!--Menampilkan judul di bagian atas kotak-->
+        
+        <!--Kolom input ini dipakai untuk menulis nama lengkap-->
+        <!--for="nama_lengkap" menghubungkan label ini dengan input bernama id="nama_lengkap"-->
+        <!--autofocus digunakan agar saat pengguna klik teks “Masukkan nama:”, kursor langsung masuk ke kotak input,
+        required berarti harus diisi, placeholder untuk ada petunjuk singkat-->
+        <label for="nama_lengkap">Masukkan nama: </label>
+        <input autofocus type="text" name = "nama_lengkap" id = "nama_lengkap" required placeholder = "Sharira Maharani">
+        <br> <!--break agar label selanjutnya ada dibawahnya-->
+
+        <!--Kolom input ini dipakai untuk menulis nim-->
+        <!--for="nim" menghubungkan label ini dengan input bernama id="nim"-->
+        <!--type number digunakan agar hanya bisa inputan berupa angka, required berarti harus diisi, placeholder untuk ada petunjuk singkat-->
+        <label for="nim">Masukkan NIM: </label>
+        <input pattern = "[0-9]" type="number" name="nim" id="nim" required placeholder = "202431001">
+        <br>
+
+        <!--Kolom input ini dipakai untuk menulis email-->
+        <!--for="email" menghubungkan label ini dengan input bernama id="email"-->
+        <!--type email digunakan agar pengguna harus menginput "@", required berarti harus diisi, placeholder untuk ada petunjuk singkat-->
+        <label for="email">Masukkan email: </label>
+        <input type="email" name="email" id="email" required placeholder = "Shariamaharani@gmail.com">
+        <br>
+
+        <!--Kolom ini dipakai untuk memilih jenis kelamin dengan type radio, hanya bisa memilih satu-->
+        <!--Dua label for="laki" dan for="perempuan" menghubungkan teks dengan tombol radionya-->
+        <!--Placeholder untuk ada petunjuk singkat, value agar nilai nya bisa tersimpan-->
+        <label for="gender">Jenis Kelamin</label><br>
+        <input type="radio" name = "gender" id = "laki" value = "Laki-Laki"><label for="laki">Laki-Laki</label>
+        <input type="radio" name = "gender" id = "perempuan" value = "Perempuan"><label for="perempuan">Perempuan</label>
+        <br>
+
+        <!--Kolom ini dipakai untuk memilih jenis kelamin dengan type dropdown, hanya bisa memilih satu-->
+        <!--Atribut for="agama" menghubungkan ke dropdown <select>-->
+        <label for="agama">Agama</label>
+        <select name="" id="Agama">
+            <option value="">Islam</option>
+            <option value="">Katolik</option>
+            <option value="">Kristen</option>
+            <option value="">Hindu</option>
+            <option value="">Buddha</option>
+            <option value="">Konghucu</option>
+        </select>
+        <br>
+
+        <!--Kolom ini dipakai untuk menulis password, dengan digunakannya type "password" maka ketika pengguna
+        menginput teks akan menjadi bullet yang membuatnya tidak terlihat-->
+        <!--Placeholder untuk ada petunjuk singkat-->
+        <label for="password">Masukkan Password: </label>
+        <input required type="password" placeholder = "admin123" name="password" id="password">
+        <br>
+
+        <!--Kolom ini dipakai untuk mengkonfirmasi password, dengan digunakannya type "password" maka ketika pengguna
+        menginput teks akan menjadi bullet yang membuatnya tidak terlihat-->
+        <!--Ada function agar isi kolom ini harus sama seperti kolom password, tetapi belum diajarkan-->
+        <label for="confirm_password">Konfirmasi Password: </label>
+        <input required type="password" name="confirm_password" id="confirm_password">
+        <br>
+
+        <!--Kolom ini digunakan untuk tombol akhir yaitu Daftar-->
+        <!--type submit digunakan untuk tombol kirim atau submit button, value digunakan agar 
+        teks yang akan muncul di tombolnya adalah "Daftar”-->
+        <input type="submit" value = "Daftar">
+
+        </form>
+</body>
+</html>
